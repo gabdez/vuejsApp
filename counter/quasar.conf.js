@@ -4,6 +4,7 @@ module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
     plugins: [
+      'axios'
     ],
     css: [
       'app.styl'
@@ -23,18 +24,18 @@ module.exports = function (ctx) {
       // gzip: true,
       // analyze: true,
       // extractCSS: false,
-      extendWebpack (cfg) {
+/*       extendWebpack (cfg) {
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /node_modules/
         })
-      }
+      } */
     },
     devServer: {
       // https: true,
-      // port: 8080,
+      port: 8082,
       open: true // opens browser window automatically
     },
     // framework: 'all' --- includes everything; for dev only!

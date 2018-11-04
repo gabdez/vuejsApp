@@ -1,4 +1,7 @@
 
 export function decrementation (state) {
-  state.minus--
+  state.number--
+}
+export function incrementation (state) {
+  state.number++
 }

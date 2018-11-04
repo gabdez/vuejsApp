@@ -5,7 +5,8 @@ const routes = [
     component: () => import('layouts/MyCounter.vue'),
     children: [
       { path: 'plus', component: () => import('pages/counterPlus.vue') },
-      { path: 'minus', component: () => import('pages/counterMinus.vue') }
+      { path: 'minus', component: () => import('pages/counterMinus.vue') },
+      { path: 'home', component: () => import('pages/counterHome.vue') }
     ]
   }
 ]

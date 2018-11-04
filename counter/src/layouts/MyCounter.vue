@@ -20,10 +20,10 @@
     <q-tabs>
       <q-route-tab
         icon="home"
-        to="/"
+        to="/home"
         exact
         slot="title"
-        label="general view"
+        label="home"
       />
       <q-route-tab
         icon="add"
@@ -45,26 +45,6 @@
         </q-toolbar-title>
       </q-toolbar>
     </q-layout-header>
-
-    <q-layout-drawer
-      v-model="leftDrawerOpen"
-      :content-class="$q.theme === 'mat' ? 'bg-grey-2' : null"
-    >
-      <q-list
-        no-border
-        link
-        inset-delimiter
-      >
-        <q-item to="/plus">
-          <q-item-side icon="add" />
-          <q-item-main label="Plus" sublabel="counter for incremente" />
-        </q-item>
-        <q-item to="/minus">
-          <q-item-side icon="toc" />
-          <q-item-main label="Minus" sublabel="counter for minus" />
-        </q-item>
-      </q-list>
-    </q-layout-drawer>
 
     <q-page-container>
       <router-view />

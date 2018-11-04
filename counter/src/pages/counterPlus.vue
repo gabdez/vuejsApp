@@ -1,8 +1,8 @@
 <template>
   <q-page class="flex flex-center">
     <div class="row">
-        <div class="col-12 flex"><q-btn class="flex-end" row flat style="color: #FF0080" label="increment +1" @click="inc++" /></div>
-        incrementeur of this tab: {{inc}}
+        <div class="col-12 flex"><q-btn class="flex-end" row flat style="color: #FF0080" label="increment +1" @click="incre" /></div>
+        incrementeur of this tab: {{number}}
     </div>
   </q-page>
 </template>
@@ -15,7 +15,16 @@ export default {
   name: 'counterMinus',
   data: function () {
     return {
-      inc: 0
+    }
+  },
+  computed: {
+    number: function () {
+      return this.$store.state.example.number;
+    }
+  },
+  methods: {
+    incre: function(){
+      this.$store.commit('example/incrementation');
     }
   }
 }
