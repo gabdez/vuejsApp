@@ -4,7 +4,7 @@
       <img class="q-mt-lg" alt="dictionary logo" src="~assets/dictionary1.png" height="140px">
     </div>
     <div class="row justify-center" style="padding-top: 40%">
-      <q-btn outline style="color: goldenrod;" label="Enter into my dictionary" icon-right="arrow_forward" @click="$router.push('/SelectL')" />
+      <q-btn outline style="color: goldenrod;" label="Enter into my dictionary" icon-right="arrow_forward" :to="'/SelectL/'"/>
     </div>
   </q-page>
 </template>

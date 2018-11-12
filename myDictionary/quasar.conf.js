@@ -41,6 +41,8 @@ module.exports = function (ctx) {
     // framework: 'all' --- includes everything; for dev only!
     framework: {
       components: [
+        'QItemSeparator',
+        'QItemTile',
         'QCard',
         'QCardTitle',
         'QCardMain',
@@ -60,10 +62,16 @@ module.exports = function (ctx) {
         'QListHeader',
         'QItem',
         'QItemMain',
-        'QItemSide'
+        'QItemSide',
+        'QModal',
+        'QFab',
+        'QFabAction',
+        'QPageSticky'
       ],
       directives: [
-        'Ripple'
+        'Ripple',
+        'BackToTop',
+        'CloseOverlay',
       ],
       // Quasar plugins
       plugins: [

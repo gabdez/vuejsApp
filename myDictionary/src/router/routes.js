@@ -1,13 +1,20 @@
-
-const routes = [
-  {
+const routes = [{
     path: '/',
     component: () => import('layouts/MyLayout.vue'),
-    children: [
-      { path: '', component: () => import('pages/Home.vue') }
-    ]
+    children: [{
+      path: '',
+      component: () => import('pages/Home.vue')
+    }]
   },
-  { path: '/selectL', component: () => import('pages/SelectLanguage.vue')}
+  {
+    path: '/selectL',
+    component: () => import('pages/SelectLanguage.vue')
+  },
+  {
+    path: '/selectL/:language',
+    name: 'language',
+    component: () => import('pages/languageDictionary.vue')
+  }
 ]
 
 // Always leave this as last one
